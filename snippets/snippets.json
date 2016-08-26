@@ -172,6 +172,24 @@
 		],
 		"description": "describe 'description' do … end"
 	},
+	"desi": {
+		"prefix": "desi",
+		"body": [
+			"describe '#${1:description}' do",
+			"  $0",
+			"end"
+		],
+		"description": "describe '#description' do … end"
+	},
+	"desc": {
+		"prefix": "desc",
+		"body": [
+			"describe '::${1:description}' do",
+			"  $0",
+			"end"
+		],
+		"description": "describe '::description' do … end"
+	},
 	"descln": {
 		"prefix": "descln",
 		"body": [
