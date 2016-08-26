@@ -1,0 +1,22 @@
+{
+    "name": "rspec-snippets",
+    "displayName": "rspec-snippets",
+    "description": "Snippets for RSpec",
+    "version": "0.0.1",
+    "publisher": "karunamurti",
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "icon": "images/rspec.png",
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "ruby",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    }
+}
