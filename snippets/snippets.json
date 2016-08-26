@@ -23,8 +23,7 @@
 			"  $1.new($3)",
 			"end"
 		],
-		"description": "Custom Matcher",
-		"scope": "source.ruby.rspec"
+		"description": "Custom Matcher"
 	},
 	"dest": {
 		"prefix": "dest",
@@ -35,49 +34,44 @@
 			"  end}",
 			"end"
 		],
-		"description": "describe (type)",
-		"scope": "source.ruby.rspec"
+		"description": "describe (type)"
 	},
 	"dests": {
 		"prefix": "dests",
 		"body": [
 			"describe ${1:Type}, '${2:description}' do",
-			"  ${3:it '${4:does something}' do",
+			"  it '${3:does something}' do",
 			"    $0",
-			"  end}",
+			"  end",
 			"end"
 		],
-		"description": "describe (type, string)",
-		"scope": "source.ruby.rspec"
+		"description": "describe (type, string)"
 	},
 	"resh": {
 		"prefix": "resh",
 		"body": [
 			"require 'spec_helper'"
 		],
-		"description": "Require spec_helper",
-		"scope": "source.ruby.rspec"
+		"description": "Require spec_helper"
 	},
 	"conn": {
 		"prefix": "conn",
 		"body": [
 			"controller_name :${1:controller}"
 		],
-		"description": "controller_name",
-		"scope": "source.ruby.rspec"
+		"description": "controller_name"
 	},
 	"st": {
 		"prefix": "st",
 		"body": [
 			"Story '${1:title}', %{",
-			"  As a${2:role}",
+			"  As a ${2:role}",
 			"  I want ${3:feature}",
 			"  So that ${4:value}",
 			"} do",
 			"end"
 		],
-		"description": "Story",
-		"scope": "source.ruby.rspec"
+		"description": "Story"
 	},
 	"afta": {
 		"prefix": "afta",
@@ -86,80 +80,70 @@
 			"  $0",
 			"end"
 		],
-		"description": "after(:all) do … end",
-		"scope": "source.ruby.rspec"
+		"description": "after(:all) do … end"
 	},
 	"allrec": {
 		"prefix": "allrec",
 		"body": [
 			"allow(${1:collaborator}).to receive(:${2:message})${3:.with(${4:args})}${5:.and_return(${6:result})}$0"
 		],
-		"description": "allow(object).to receive(message)",
-		"scope": "source.ruby.rspec"
+		"description": "allow(object).to receive(message)"
 	},
 	"anr": {
 		"prefix": "anr",
 		"body": [
 			"and_raise(${1:exception})"
 		],
-		"description": "and_raise",
-		"scope": "source.ruby.rspec"
+		"description": "and_raise"
 	},
 	"anrb": {
 		"prefix": "anrb",
 		"body": [
 			"and_return { $1 }"
 		],
-		"description": "and_return with block",
-		"scope": "source.ruby.rspec"
+		"description": "and_return with block"
 	},
 	"anra": {
 		"prefix": "anra",
 		"body": [
 			"and_return(${1:value})"
 		],
-		"description": "and_return with args",
-		"scope": "source.ruby.rspec"
+		"description": "and_return with args"
 	},
 	"ant": {
 		"prefix": "ant",
 		"body": [
 			"and_throw(${1:sym})"
 		],
-		"description": "and_throw",
-		"scope": "source.ruby.rspec"
+		"description": "and_throw"
 	},
 	"any": {
 		"prefix": "any",
 		"body": [
 			"and_yield(${1:values})"
 		],
-		"description": "and_yield",
-		"scope": "source.ruby.rspec"
+		"description": "and_yield"
 	},
 	"annot": {
 		"prefix": "annot",
 		"body": [
 			"any_number_of_times"
 		],
-		"description": "any_number_of_times",
-		"scope": "source.ruby.rspec"
+		"description": "any_number_of_times"
 	},
 	"atl": {
 		"prefix": "atl",
 		"body": [
 			"at_least(${1:n}).times"
 		],
-		"description": "at_least",
-		"scope": "source.ruby.rspec"
+		"description": "at_least"
 	},
 	"atm": {
 		"prefix": "atm",
 		"body": [
 			"at_most(${1:n}).times"
 		],
-		"description": "at_most",
-		"scope": "source.ruby.rspec"
+		"description": "at_most"
 	},
 	"befa": {
 		"prefix": "befa",
@@ -168,18 +152,16 @@
 			"  $0",
 			"end"
 		],
-		"description": "before(:all) do … end",
-		"scope": "source.ruby.rspec"
+		"description": "before(:all) do … end"
 	},
 	"con": {
 		"prefix": "con",
 		"body": [
 			"context '${1:description}' do",
-			"\t$0",
+			"  $0",
 			"end"
 		],
-		"description": "context 'description' do … end",
-		"scope": "source.ruby.rspec"
+		"description": "context 'description' do … end"
 	},
 	"des": {
 		"prefix": "des",
@@ -188,72 +170,63 @@
 			"  $0",
 			"end"
 		],
-		"description": "describe 'description' do … end",
-		"scope": "source.ruby.rspec"
+		"description": "describe 'description' do … end"
 	},
 	"descln": {
 		"prefix": "descln",
 		"body": [
 			"described_class.new${1:($2)}"
 		],
-		"description": "described_class.new()",
-		"scope": "source.ruby.rspec"
+		"description": "described_class.new()"
 	},
 	"descl": {
 		"prefix": "descl",
 		"body": [
 			"described_class"
 		],
-		"description": "described_class",
-		"scope": "source.ruby.rspec"
+		"description": "described_class"
 	},
 	"ex": {
 		"prefix": "ex",
 		"body": [
 			"exactly(${1:n}).times"
 		],
-		"description": "exactly",
-		"scope": "source.ruby.rspec"
+		"description": "exactly"
 	},
 	"expto": {
 		"prefix": "expto",
 		"body": [
 			"expect {${2: ${1:expression} }}.to ${3:matcher}"
 		],
-		"description": "expect { expression }.to something",
-		"scope": "source.ruby.rspec"
+		"description": "expect { expression }.to something"
 	},
 	"exp": {
 		"prefix": "exp",
 		"body": [
 			"expect(${1:subject}).to ${2:matcher}$0"
 		],
-		"description": "expect(subject).to something",
-		"scope": "source.ruby.rspec"
+		"description": "expect(subject).to something"
 	},
 	"expbc": {
 		"prefix": "expbc",
 		"body": [
 			"expect(${1:subject}).to be_close(${2:result}, ${3:tolerance})$0"
 		],
-		"description": "expect(obj).to be_close",
-		"scope": "source.ruby.rspec"
+		"description": "expect(obj).to be_close"
 	},
 	"expbn": {
 		"prefix": "expbn",
 		"body": [
 			"expect(${1:subject}).to be_nil$0"
 		],
-		"description": "expect(obj).to be_nil",
-		"scope": "source.ruby.rspec"
+		"description": "expect(obj).to be_nil"
 	},
 	"expbe": {
 		"prefix": "expbe",
 		"body": [
 			"expect(${1:subject}).to be$0"
 		],
-		"description": "expect(obj).to be",
-		"scope": "source.ruby.rspec"
+		"description": "expect(obj).to be"
 	},
 	"expdo": {
 		"prefix": "expdo",
@@ -263,272 +236,238 @@
 			"end.to ${2:matcher}$0",
 			""
 		],
-		"description": "expect do ... end.to something",
-		"scope": "source.ruby.rspec"
+		"description": "expect do ... end.to something"
 	},
 	"expeq": {
 		"prefix": "expeq",
 		"body": [
 			"expect(${1:subject}).to eq(${2:value})$0"
 		],
-		"description": "expect(obj).to eq(value)",
-		"scope": "source.ruby.rspec"
+		"description": "expect(obj).to eq(value)"
 	},
 	"expeql": {
 		"prefix": "expeql",
 		"body": [
 			"expect(${1:subject}).to eql(${2:value})$0"
 		],
-		"description": "expect(obj).to eql(value)",
-		"scope": "source.ruby.rspec"
+		"description": "expect(obj).to eql(value)"
 	},
 	"expexist": {
 		"prefix": "expexist",
 		"body": [
 			"expect(${1:subject}).to exist$0"
 		],
-		"description": "expect(obj).to exist",
-		"scope": "source.ruby.rspec"
+		"description": "expect(obj).to exist"
 	},
 	"exphave": {
 		"prefix": "exphave",
 		"body": [
 			"expect(${1:subject}).to have(${2:num}).${3:items}$0"
 		],
-		"description": "expect(obj).to have(num)",
-		"scope": "source.ruby.rspec"
+		"description": "expect(obj).to have(num)"
 	},
 	"exprec": {
 		"prefix": "exprec",
 		"body": [
 			"expect(${1:collaborator}).to have_received(:${2:message})${3:.with(${4:args})}$0"
 		],
-		"description": "expect(object).to have_received(message)",
-		"scope": "source.ruby.rspec"
+		"description": "expect(object).to have_received(message)"
 	},
 	"expinclude": {
 		"prefix": "expinclude",
 		"body": [
 			"expect(${1:subject}).to include(${2:element})$0"
 		],
-		"description": "expect(obj).to include(element)",
-		"scope": "source.ruby.rspec"
+		"description": "expect(obj).to include(element)"
 	},
 	"expmatch": {
 		"prefix": "expmatch",
 		"body": [
 			"expect(${1:subject}).to match(/${2:regexp}/)$0"
 		],
-		"description": "expect(obj).to match",
-		"scope": "source.ruby.rspec"
+		"description": "expect(obj).to match"
 	},
 	"expraise": {
 		"prefix": "expraise",
 		"body": [
 			"expect { ${1:action} }.to raise_error(${2:Error})$0"
 		],
-		"description": "expect { action }.to raise",
-		"scope": "source.ruby.rspec"
+		"description": "expect { action }.to raise"
 	},
 	"exprec1": {
 		"prefix": "exprec",
 		"body": [
 			"expect(${1:collaborator}).to receive(:${2:message})${3:.with(${4:args})}$0"
 		],
-		"description": "expect(object).to receive(message)",
-		"scope": "source.ruby.rspec"
+		"description": "expect(object).to receive(message)"
 	},
 	"bko": {
 		"prefix": "bko",
 		"body": [
 			"expect(${1:subject}).to be_a_kind_of(${2:klass})$0"
 		],
-		"description": "expect(subject) be_a_kind_of",
-		"scope": "source.ruby.rspec"
+		"description": "expect(subject) be_a_kind_of"
 	},
 	"bio": {
 		"prefix": "bio",
 		"body": [
 			"expect(${1:subject}).to be_an_instance_of(${2:klass})$0"
 		],
-		"description": "expect(subject) be_an_instance_of",
-		"scope": "source.ruby.rspec"
+		"description": "expect(subject) be_an_instance_of"
 	},
 	"bpm": {
 		"prefix": "bpm",
 		"body": [
 			"expect(${1:subject}).to be_${2:predicated_method}$0"
 		],
-		"description": "expect(subject) be_{predicated_method}",
-		"scope": "source.ruby.rspec"
+		"description": "expect(subject) be_{predicated_method}"
 	},
 	"equal": {
 		"prefix": "equal",
 		"body": [
 			"expect(${1:subject}).to equal(${2:value})$0"
 		],
-		"description": "expect equal",
-		"scope": "source.ruby.rspec"
+		"description": "expect equal"
 	},
 	"hat": {
 		"prefix": "hat",
 		"body": [
 			"expect(${1:subject}).to have_at_least(${2:num}).${3:things}$0"
 		],
-		"description": "expect(subject) have_at_least",
-		"scope": "source.ruby.rspec"
+		"description": "expect(subject) have_at_least"
 	},
 	"ham": {
 		"prefix": "ham",
 		"body": [
 			"expect(${1:subject}).to have_at_most(${2:num}).${3:things}$0"
 		],
-		"description": "expect(subject) have_at_most",
-		"scope": "source.ruby.rspec"
+		"description": "expect(subject) have_at_most"
 	},
 	"he": {
 		"prefix": "he",
 		"body": [
 			"expect(${1:subject}).to have_exactly(${2:num}).${3:things}$0"
 		],
-		"description": "expect(subject) have_exactly",
-		"scope": "source.ruby.rspec"
+		"description": "expect(subject) have_exactly"
 	},
 	"nbe": {
 		"prefix": "nbe",
 		"body": [
 			"expect(${1:subject}).not_to be$0"
 		],
-		"description": "expect(subject) not be",
-		"scope": "source.ruby.rspec"
+		"description": "expect(subject) not be"
 	},
 	"nbko": {
 		"prefix": "nbko",
 		"body": [
 			"expect(${1:subject}).not_to be_a_kind_of(${2:klass})$0"
 		],
-		"description": "expect(subject) not be_a_kind_of",
-		"scope": "source.ruby.rspec"
+		"description": "expect(subject) not be_a_kind_of"
 	},
 	"nbio": {
 		"prefix": "nbio",
 		"body": [
 			"expect(${1:subject}).not_to be_an_instance_of(${2:klass})$0"
 		],
-		"description": "expect(subject) not be_an_instance_of",
-		"scope": "source.ruby.rspec"
+		"description": "expect(subject) not be_an_instance_of"
 	},
 	"nbn": {
 		"prefix": "nbn",
 		"body": [
 			"expect(${1:subject}).not_to be_nil$0"
 		],
-		"description": "expect(subject) not be_nil",
-		"scope": "source.ruby.rspec"
+		"description": "expect(subject) not be_nil"
 	},
 	"nbpm": {
 		"prefix": "nbpm",
 		"body": [
 			"expect(${1:subject}).not_to be_${2:predicated_method}$0"
 		],
-		"description": "expect(subject) not be_{predicated_method}",
-		"scope": "source.ruby.rspec"
+		"description": "expect(subject) not be_{predicated_method}"
 	},
 	"neql": {
 		"prefix": "neql",
 		"body": [
 			"expect(${1:subject}).not_to eql(${2:value})$0"
 		],
-		"description": "expect not eql",
-		"scope": "source.ruby.rspec"
+		"description": "expect not eql"
 	},
 	"nequal": {
 		"prefix": "nequal",
 		"body": [
 			"expect(${1:subject}).not_to equal(${2:value})$0"
 		],
-		"description": "expect not equal",
-		"scope": "source.ruby.rspec"
+		"description": "expect not equal"
 	},
 	"nexist": {
 		"prefix": "nexist",
 		"body": [
 			"expect(${1:subject}).not_to exist$0"
 		],
-		"description": "expect(subject) not exist",
-		"scope": "source.ruby.rspec"
+		"description": "expect(subject) not exist"
 	},
 	"ninc": {
 		"prefix": "ninc",
 		"body": [
 			"expect(${1:subject}).not_to include(${2})$0"
 		],
-		"description": "expect(subject) not include(element)",
-		"scope": "source.ruby.rspec"
+		"description": "expect(subject) not include(element)"
 	},
 	"nmatch": {
 		"prefix": "nmatch",
 		"body": [
 			"expect(${1:subject}).not_to match(/${2:regexp}/)$0"
 		],
-		"description": "expect(subject) not match",
-		"scope": "source.ruby.rspec"
+		"description": "expect(subject) not match"
 	},
 	"nraise": {
 		"prefix": "nraise",
 		"body": [
 			"expect { raise ${1:Error} }.not_to raise_error(${2:Error})$0"
 		],
-		"description": "expect not raise_error",
-		"scope": "source.ruby.rspec"
+		"description": "expect not raise_error"
 	},
 	"nrt": {
 		"prefix": "nrt",
 		"body": [
 			"expect(${1:subject}).not_to respond_to(:${2:method})$0"
 		],
-		"description": "expect(subject) not respond_to",
-		"scope": "source.ruby.rspec"
+		"description": "expect(subject) not respond_to"
 	},
 	"nsat": {
 		"prefix": "nsat",
 		"body": [
 			"expect(${1:subject}).not_to satisfy { |${2:obj}| ${3:expression} }$0"
 		],
-		"description": "expect(subject) not satisfy",
-		"scope": "source.ruby.rspec"
+		"description": "expect(subject) not satisfy"
 	},
 	"nthr": {
 		"prefix": "nthr",
 		"body": [
 			"expect { throw $1 }.to_not throw_symbol(:${2:symbol})$0"
 		],
-		"description": "expect not throw",
-		"scope": "source.ruby.rspec"
+		"description": "expect not throw"
 	},
 	"rt": {
 		"prefix": "rt",
 		"body": [
 			"expect(${1:subject}).to respond_to(:${2:method})$0"
 		],
-		"description": "expect(subject) respond_to",
-		"scope": "source.ruby.rspec"
+		"description": "expect(subject) respond_to"
 	},
 	"sat": {
 		"prefix": "sat",
 		"body": [
 			"expect(${1:subject}).to satisfy { |${2:obj}| ${3:expression} }$0"
 		],
-		"description": "expect(subject) satisfy",
-		"scope": "source.ruby.rspec"
+		"description": "expect(subject) satisfy"
 	},
 	"thr": {
 		"prefix": "thr",
 		"body": [
 			"expect { throw $1 }.to throw_symbol(:${2:symbol})$0"
 		],
-		"description": "expect throw",
-		"scope": "source.ruby.rspec"
+		"description": "expect throw"
 	},
 	"fea": {
 		"prefix": "fea",
@@ -537,16 +476,14 @@
 			"  $0",
 			"end"
 		],
-		"description": "feature 'description' do … end",
-		"scope": "source.ruby.rspec"
+		"description": "feature 'description' do … end"
 	},
 	"idou": {
 		"prefix": "idou",
 		"body": [
 			"instance_double('${1:ClassName}'${2:, ${3:method: nil}}) $0"
 		],
-		"description": "instance_double('class')",
-		"scope": "source.ruby.rspec"
+		"description": "instance_double('class')"
 	},
 	"it": {
 		"prefix": "it",
@@ -555,112 +492,98 @@
 			"\t$0",
 			"end"
 		],
-		"description": "it 'does something' do … end",
-		"scope": "source.ruby.rspec"
+		"description": "it 'does something' do … end"
 	},
 	"itie": {
 		"prefix": "itie",
 		"body": [
 			"it { ${2:is_expected.to ${1:matcher}} }$0"
 		],
-		"description": "it { is_expected.to something }",
-		"scope": "source.ruby.rspec"
+		"description": "it { is_expected.to something }"
 	},
 	"iti": {
 		"prefix": "iti",
 		"body": [
 			"it { ${2:should ${1:matcher}} }$0"
 		],
-		"description": "it { should something }",
-		"scope": "source.ruby.rspec"
+		"description": "it { should something }"
 	},
 	"itsbl": {
 		"prefix": "itsbl",
 		"body": [
 			"it_should_behave_like ${2:'$1'}$0"
 		],
-		"description": "it_should_behave_like",
-		"scope": "source.ruby.rspec"
+		"description": "it_should_behave_like"
 	},
 	"itbl": {
 		"prefix": "itbl",
 		"body": [
 			"it_behaves_like ${2:'$1'}$0"
 		],
-		"description": "it_behaves_like",
-		"scope": "source.ruby.rspec"
+		"description": "it_behaves_like"
 	},
 	"let": {
 		"prefix": "let",
 		"body": [
 			"let(:${1:object}) { $0 }"
 		],
-		"description": "let(:object) { }",
-		"scope": "source.ruby.rspec"
+		"description": "let(:object) { }"
 	},
 	"letb": {
 		"prefix": "letb",
 		"body": [
 			"let!(:${1:object}) { $0 }"
 		],
-		"description": "let!(:object) { }",
-		"scope": "source.ruby.rspec"
+		"description": "let!(:object) { }"
 	},
 	"moc": {
 		"prefix": "moc",
 		"body": [
-			"${1:var} = mock('${2:mock_name}'${3:, :null_object => true})$0"
+			"${1:var} = mock('${2:mock_name}'${3:, null_object: true})$0"
 		],
-		"description": "mock",
-		"scope": "source.ruby.rspec"
+		"description": "mock"
 	},
 	"on": {
 		"prefix": "on",
 		"body": [
 			"once"
 		],
-		"description": "once",
-		"scope": "source.ruby.rspec"
+		"description": "once"
 	},
 	"ord": {
 		"prefix": "ord",
 		"body": [
 			"ordered"
 		],
-		"description": "ordered",
-		"scope": "source.ruby.rspec"
+		"description": "ordered"
 	},
 	"pending": {
 		"prefix": "pending",
 		"body": [
 			"pending${1: '${2:reason}'}"
 		],
-		"description": "pending",
-		"scope": "source.ruby.rspec"
+		"description": "pending"
 	},
 	"rerh": {
 		"prefix": "rerh",
 		"body": [
 			"require 'rails_helper'"
 		],
-		"description": "Require rails_helper",
-		"scope": "source.ruby.rspec"
+		"description": "Require rails_helper"
 	},
 	"shbs": {
 		"prefix": "shbs",
 		"body": [
 			"response.should be_success$0"
 		],
-		"description": "should be_success",
-		"scope": "source.ruby.rspec"
+		"description": "should be_success"
 	},
 	"shnbs": {
 		"prefix": "shnbs",
 		"body": [
 			"response.should_not be_success$0"
 		],
-		"description": "should_not be_success",
-		"scope": "source.ruby.rspec"
+		"description": "should_not be_success"
 	},
 	"sce": {
 		"prefix": "sce",
@@ -669,8 +592,7 @@
 			"  $0",
 			"end"
 		],
-		"description": "scenario 'does something' do … end",
-		"scope": "source.ruby.rspec"
+		"description": "scenario 'does something' do … end"
 	},
 	"bef": {
 		"prefix": "bef",
@@ -679,24 +601,21 @@
 			"  $0",
 			"end"
 		],
-		"description": "before",
-		"scope": "source.ruby.rspec"
+		"description": "before"
 	},
 	"specify": {
 		"prefix": "specify",
 		"body": [
 			"specify { $0 }"
 		],
-		"description": "specify { }",
-		"scope": "source.ruby.rspec"
+		"description": "specify { }"
 	},
 	"subject": {
 		"prefix": "subject",
 		"body": [
-			"subject${1/(^.+$)|^$/(?1:\\(\\:)/}${1:subject}${1/(^.+$)|^$/(?1:\\)/} { ${3:${2:described_class}.new${4:($5)}} }"
+			"subject { $1 }"
 		],
-		"description": "subject(:subject) { described_class.new }",
-		"scope": "source.ruby.rspec"
+		"description": "subject { :subject }"
 	},
 	"aft": {
 		"prefix": "aft",
@@ -705,15 +624,13 @@
 			"  $0",
 			"end"
 		],
-		"description": "after",
-		"scope": "source.ruby.rspec"
+		"description": "after"
 	},
 	"tw": {
 		"prefix": "tw",
 		"body": [
 			"twice"
 		],
-		"description": "twice",
-		"scope": "source.ruby.rspec"
+		"description": "twice"
 	}
 }
