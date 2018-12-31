@@ -82,6 +82,15 @@
 		],
 		"description": "after(:all) do … end"
 	},
+	"aftc": {
+		"prefix": "aftc",
+		"body": [
+			"after(:context) do",
+			"  $0",
+			"end"
+		],
+		"description": "after(:context) do … end"
+	},
 	"allrec": {
 		"prefix": "allrec",
 		"body": [
@@ -153,6 +162,15 @@
 			"end"
 		],
 		"description": "before(:all) do … end"
+	},
+	"befc": {
+		"prefix": "befc",
+		"body": [
+			"before(:context) do",
+			"  $0",
+			"end"
+		],
+		"description": "before(:context) do … end"
 	},
 	"con": {
 		"prefix": "con",
