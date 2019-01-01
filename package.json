@@ -1,8 +1,12 @@
 {
+    "author": {
+        "name" : "Karuna Murti",
+        "email" : "karuna.murti@gmail.com"
+	},
     "name": "rspec-snippets",
     "displayName": "rspec-snippets",
     "description": "Snippets for RSpec",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "publisher": "karunamurti",
     "engines": {
         "vscode": "^1.0.0"
@@ -18,5 +22,10 @@
                 "path": "./snippets/snippets.json"
             }
         ]
-    }
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/karuna/vscode-rspec-snippetss"
+    },
+    "license": "MIT"
 }
